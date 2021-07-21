@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-const App = (props) => {
-  console.log("render()");
+function App () {
 
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
 
-  const incrementCount = () => {setCount(count + 1)};
+  const handleIncrement = () => {
+    setCounter(counter + 1);
+  }
 
   return (
     <>
-      <h1>Counter Functional Component: {count}</h1>
-      <button onClick={incrementCount}>+</button>
+      <div>Counter: {counter}</div>
+      <button onClick={handleIncrement}>+</button>
     </>
   );
-};
+}
 
 export default App;
